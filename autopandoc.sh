@@ -21,7 +21,7 @@ do
 				echo "File alreadyy exists. Appending."
 				NEWFILENAME="${FILENAME_NOEXT_NOSPACE}_converted.txt"
 			fi
-			echo "Converting ${FILE} to dokuwiki format as ${NEWFILENAME}.txt"
+			echo "Converting ${FILE} to dokuwiki format as ${NEWFILENAME}"
 			pandoc -t dokuwiki -o "${NEWFILENAME}" "${FILE}"
 		fi
 	fi
