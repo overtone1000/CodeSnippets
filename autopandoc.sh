@@ -20,7 +20,7 @@ do
 			then
 				NEWFILENAME="${FILENAME_NOEXT_NOSPACE}_converted.txt"
 			fi
-			echo "Converting ${FILE} to dokuwiki format as ${FILENAME}.txt"
+			echo "Converting ${FILE} to dokuwiki format as ${NEWFILENAME}.txt"
 			pandoc -t dokuwiki -o "${NEWFILENAME}.txt" "${FILE}"
 		fi
 	fi
