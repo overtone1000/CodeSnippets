@@ -18,10 +18,11 @@ do
 			NEWFILENAME="${FILENAME_NOEXT_NOSPACE}.txt"
 			if [ "${NEWFILENAME}" == "${FILE}" ];
 			then
+				echo "File alreadyy exists. Appending."
 				NEWFILENAME="${FILENAME_NOEXT_NOSPACE}_converted.txt"
 			fi
 			echo "Converting ${FILE} to dokuwiki format as ${NEWFILENAME}.txt"
-			pandoc -t dokuwiki -o "${NEWFILENAME}.txt" "${FILE}"
+			pandoc -t dokuwiki -o "${NEWFILENAME}" "${FILE}"
 		fi
 	fi
 done
